@@ -1,0 +1,9 @@
+depth_image_topic: /kinect2/qhd/image_depth_rect
+camera_info_topic: /kinect2/qhd/camera_info
+rgb_image_topic: /kinect2/qhd/image_color_rect
+
+resolution:
+  width: 960
+  height: 540
+
+downsampling_factor: 1

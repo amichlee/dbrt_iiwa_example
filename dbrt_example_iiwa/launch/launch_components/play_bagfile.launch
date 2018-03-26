@@ -1,0 +1,24 @@
+<launch>
+
+  # we play the example sequence with the parameters --clock,
+  # such that the timestamps from the bagfile are used,
+  # and we play it at a rate of 0.3 for more convenient visualization
+
+  <arg name="bagfile" default="/scr-ssd/real/bags/corrected_02.bag"/>
+
+  <param name="/bagfile" type="str" value="$(arg bagfile)" />
+
+  <node pkg="tf" type="tf_remap" name="tf_remapper" output="screen">
+  <rosparam param="mappings">
+    [{old: joint0, new: link0},{old: joint1, new: link1},{old: joint2, new: link2},{old: joint3, new: link3},{old: joint4, new: link4},{old: joint5, new: link5},{old: joint6, new: link6}]
+  </rosparam>
+	</node>
+
+  <node pkg="rosbag" type="play" name="player" output="screen" 
+   args="--clock --rate=0.3 $(arg bagfile)">    <remap from="tf" to="tf_old"  />
+      </node>
+
+
+</launch>
+
+

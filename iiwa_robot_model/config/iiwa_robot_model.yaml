@@ -1,0 +1,192 @@
+# This file has evolved into a configuration file for the arm_controller_interface library
+
+#team_home:
+#  arm_joint_configuration: [1.762, -3.014, -2.388, 2.472, 0.996, 0.403, -1.578]
+#  hand_joint_configuration: [0.0, 0.0, 0.0, 0.0]
+#  head_joint_configuration: [0.0, 0.0, 0.0, 0.0]
+
+joint_state_publish_rate: 1000
+sl_robot_path: "iiwa_user"
+
+
+joint_info:
+  -
+    name: "R_SFE"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_SAA"
+    sl_joint_offset: 1.570796
+    sl_joint_polarity: -1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_HR"
+    sl_joint_offset: -0.785398
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_EB"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_WR"
+    sl_joint_offset: -1.570796
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "R_WFE"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "R_WAA"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "L_SFE"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_SAA"
+    sl_joint_offset: 1.570796
+    sl_joint_polarity: -1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_HR"
+    sl_joint_offset: -0.785398
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_EB"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_WR"
+    sl_joint_offset: -1.570796
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "L_WFE"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "L_WAA"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 3.0
+  -
+    name: "B_HN"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "B_HT"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "B_HR"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_EP"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_ET"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_EP"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "L_ET"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 2.0
+  -
+    name: "R_FR"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "R_RF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "R_MF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "R_LF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "L_FR"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "L_RF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "L_MF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+  -
+    name: "L_LF"
+    sl_joint_offset: 0.0
+    sl_joint_polarity: 1.0
+    preferred_velocity: 0.5
+
+
+robot_part:
+  -
+    name: "RIGHT_ARM"
+    joints: ["R_SFE","R_SAA","R_HR","R_EB","R_WR","R_WFE","R_WAA"]
+  -
+    name: "LEFT_ARM"
+    joints: ["L_SFE","L_SAA","L_HR","L_EB","L_WR","L_WFE","L_WAA"]
+  -
+    name: "RIGHT_HAND"
+    joints: ["R_FR","R_RF","R_MF","R_LF"]
+  -
+    name: "LEFT_HAND"
+    joints: ["L_FR","L_RF","L_MF","L_LF"]
+  -
+    name: "HEAD"
+    joints: ["B_HN","B_HT","B_HR","R_EP","R_ET","L_EP","L_ET"]
+
+endeffector:
+  -
+    name: "R_HAND"
+    link: "R_PALM"
+  -
+    name: "L_HAND"
+    link: "L_PALM"
+
+trajectory_timing_generator:
+  min_cartesian_trajectory_duration: 0.1
+  cartesian_preferred_velocities:
+    position: 1.0       # meters per second
+    orientation: 2.0    # radians per second
+
+cartesian_position_tolerance: 0.05
+cartesian_orientation_tolerance: 0.4

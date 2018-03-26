@@ -1,0 +1,9 @@
+depth_image_topic: /kinect2/sd/image_depth_rect
+camera_info_topic: /kinect2/sd/camera_info
+rgb_image_topic: /kinect2/sd/image_color_rect
+
+resolution:
+  width: 424
+  height: 512
+
+downsampling_factor: 1
