@@ -4,7 +4,7 @@
   # such that the timestamps from the bagfile are used,
   # and we play it at a rate of 0.3 for more convenient visualization
 
-  <arg name="bagfile" default="/scr-ssd/real/bags/corrected_02.bag"/>
+  <arg name="bagfile" default="$(find dbrt_example_iiwa)corrected_02.bag"/>
 
   <param name="/bagfile" type="str" value="$(arg bagfile)" />
 
